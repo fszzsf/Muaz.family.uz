@@ -37,11 +37,13 @@ header {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.image img{
+
+.image img {
     width: 130px;
     border-radius: 50%;
     object-fit: cover;
 }
+
 .nav #name {
     background: linear-gradient(90deg, #ffffff, #b19600);
     -webkit-background-clip: text;
@@ -115,40 +117,46 @@ header {
     color: #b19600;
     font-weight: bolder;
 }
-.nav2{
+
+.nav2 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.nav2 ul{
+
+.nav2 ul {
     width: 100%;
     list-style-type: none;
-    padding:15px 100px;
+    padding: 15px 100px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
-li{
+
+li {
     align-items: center;
     justify-content: space-between;
     display: flex;
     width: 100%;
 }
-a{
+
+a {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
-a img{
+
+a img {
     display: flex;
     align-items: center;
-    justify-content: space-between  ;
+    justify-content: space-between;
     width: 30px;
     height: 30px;
 
 }
-footer{
+
+footer {
     width: 100%;
     height: 100px;
     background-color: #0a0a0a;
@@ -158,6 +166,7 @@ footer{
     padding: 10px;
     text-align: center;
 }
+
 footer h3 {
     display: flex;
     align-items: center;
@@ -167,4 +176,123 @@ footer h3 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Hamma elementlarni 420px ekranlarga moslashtirish */
+@media screen and (max-width: 420px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        /* Umumiy matn o‘lchami */
+    }
+
+    header {
+        height: 60px;
+        /* Header balandligi kichrayadi */
+        background-color: rgb(30, 30, 30);
+    }
+
+    .container {
+        flex-direction: column;
+        /* Elementlar ustma-ust joylashadi */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        /* Navigatsiya ustma-ust joylashadi */
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .nav img {
+        margin-top: -10px0;
+        width: 80px;
+        height: 80px;
+        /* Rasmning o‘lchami moslashtiriladi */
+        margin-bottom: 10px;
+    }
+
+    .swiper-slide {
+        position: relative;
+        /* Slaydlar nisbiy joylashadi */
+        font-size: 12px;
+        /* Slayd matni kichrayadi */
+    }
+
+    .swiper-slide img {
+        width: 90%;
+        /* Tasvirlar kenglikka moslashadi */
+        height: 30%;
+        margin: 0;
+    }
+
+    .swiper-slide span {
+        position: absolute;
+        top: 15%;
+        /* Text pastroq joylashadi */
+        left: 20%;
+        font-size: 16px;
+        /* Matnni kichraytirish */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 12px;
+        /* Tugmalar kichrayadi */
+        top: auto;
+        /* Tugmalar vertikal joylashishi to‘g‘rilanadi */
+        bottom: 10px;
+        /* Ekranning past qismiga suriladi */
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+        font-size: 12px;
+        /* Matn balandligi kichrayadi */
+        text-align: center;
+    }
+
+    footer h3 {
+        font-size: 16px;
+        /* Matn kichrayadi */
+    }
+
+    /* Maxsus to'g'rilash */
+    .sale {
+        position: relative;
+        height: auto;
+        background-color: #252525;
+        text-align: center;
+    }
+
+    .swiper-slide span {
+        top: 10%;
+        right: auto;
+        /* Ortiqcha o'ngdan joylashishni olib tashlash */
+        font-size: 14px;
+        padding: 5px 10px;
+        border: 1px solid red;
+    }
+
+    .nav2 {
+        flex-direction: column;
+        /* Kichik ekranda menyular ustma-ust */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav2 ul {
+        flex-direction: column;
+        font-size: 14px;
+        /* Kichikroq matn */
+        padding: 0;
+    }
+
+    .nav2 ul li {
+        margin-bottom: 10px;
+    }
 }
